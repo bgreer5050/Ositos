@@ -1,0 +1,53 @@
+**Changelog:**
+
+**Version 3.1:**
+
+- Removed revolution slider.
+
+**Version 3.0.1:**
+
+- Added responsive navigation bar in index-rslider.html page (index-rslider.html).
+- Layout bug fix in index-rslider.html page. (style.css).
+
+**Version 3.0:**
+
+- Renamed folder "style" to "css".
+- Updated Bootstrap to version 3.1.1.
+- Updated jQuery to latest version.
+- Updated HTML5Shiv to latest version.
+- Added Respond js file.
+- Added 0-base.html file.
+- Added charset meta utf-8 in all html files.
+- Added 3 new pages service.html, feature.html, index-rslider.html in theme. (style.css, red.css, green.css, blue.css )
+- Bug fix from share panel. (custom.js)
+- Bug fix from Sidebar slide. (custom.js)
+- Updated social media icon in share panel. (all .html files, style.css)
+- Updated about us page. (about-us.html, style.css)
+- Added progress bar and removed badges from index-full-width page. (full-width.html)
+- Added map frame border and changed layout of map in contact-us page. (contact-us.html, style.css)
+- Added border bottom for each entry in blog and blog-single page. (blog.html, blog-single.html, style.css)
+- Updated navigation menu. (all .html files)
+- Updated font folder to fonts folder.
+- Updated Font Awesome icon to latest version.(all .html files)
+- Google font links removed from html files and added in stylesheet. (all .html files, style.css)
+- Added Scroll to top in theme. (all .html files, style.css, red.css, green.css, blue.css, custom.js)
+- Updated portfolio images.
+- Removed last two slides from flex slider. 
+- Added documentation.
+- Changed the theme name from Outlooker to Onecolor.
+
+**Version 2.0:**
+
+- Updated to Bootstrap 3.0
+
+**Version 1.2:**
+
+- Twitter Feed Removed because of recent Twitter API Update.
+
+**Version 1.1:**
+
+- Portfolio update
+
+**Version 1.0:**
+
+- Initial Release
