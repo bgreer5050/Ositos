@@ -23,10 +23,10 @@ namespace Ositos.StoreContactRecord
 
         protected override void OnStart(string[] args)
         {
-            //this.timer = new System.Timers.Timer(120000);  // 30000 milliseconds = 30 seconds
-            //this.timer.AutoReset = true;
-            //this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
-            //this.timer.Start();
+            this.timer = new System.Timers.Timer(120000);  // 30000 milliseconds = 30 seconds
+            this.timer.AutoReset = true;
+            this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
+            this.timer.Start();
         }
 
 
@@ -140,6 +140,11 @@ namespace Ositos.StoreContactRecord
 
                 sr.Close();
                 //build record object
+
+                record.DateOfContact = DateTime.Today.Date.Date;
+                record.DateOfContact = record.DateOfContact.AddHours(DateTime.Now.Hour);
+                record.DateOfContact = record.DateOfContact.AddMinutes(DateTime.Now.Minute);
+
 
                 //store in db
                 db.ContactRecords.Add(record);
