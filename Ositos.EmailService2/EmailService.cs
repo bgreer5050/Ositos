@@ -46,7 +46,7 @@ namespace Ositos.EmailService2
             try
             {
                 OsitoContext db = new OsitoContext();
-                foreach(ContactRecord record in db.ContactRecords.Where(c=>c.Emailed == "No"))
+                foreach(ContactRecord record in db.ContactRecords.Where(c=>c.Emailed != "Yes"))
                 {
 
                     NotifyViaEmail(record);
