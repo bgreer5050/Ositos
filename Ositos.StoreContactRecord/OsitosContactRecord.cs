@@ -157,7 +157,7 @@ namespace Ositos.StoreContactRecord
 
                 foreach(string strFile in files)
                 {
-                    File.Move(strFile,@"c:\ositos\log\pickup\archived");
+                    File.Move(strFile,@"c:\ositos\logs\pickup\archived");
                 }
 
                 db.Dispose();
