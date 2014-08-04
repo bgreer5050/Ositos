@@ -16,7 +16,7 @@ namespace Ositos.EmailService2
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
-                new EmailService() 
+                new OsitosEmailService() 
             };
             ServiceBase.Run(ServicesToRun);
         }
