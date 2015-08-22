@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ositos5\Ositos5.csproj">

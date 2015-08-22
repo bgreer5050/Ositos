@@ -1,39 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Linq;
-using System.ServiceProcess;
 using System.Text;
 using Ositos5.DAL;
-using System.Net.Mail;
 using System.Net;
+using System.Net.Mail;
 
-namespace Ositos.EmailService2
+namespace DeleteTestContactRecord
 {
-    public partial class OsitosEmailService : ServiceBase
+    class TestEmail
     {
-        private System.Timers.Timer timer;
 
-        public OsitosEmailService()
-        {
-            InitializeComponent();
-        }
-
-        protected override void OnStart(string[] args)
-        {
-
-
-            WriteToLog("Email Service Started");
-            this.timer = new System.Timers.Timer(120000);  // 30000 milliseconds = 30 seconds
-            this.timer.AutoReset = true;
-            this.timer.Elapsed += new System.Timers.ElapsedEventHandler(this.timer_Elapsed);
-            this.timer.Start();
-        }
-
-
-        void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        public static void Start()
         {
             try
             {
@@ -64,28 +42,28 @@ namespace Ositos.EmailService2
                     sw.Dispose();
                 }
                 catch (Exception exT)
-                {  
+                {
                     sw.Close();
                     sw.Dispose();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 WriteToLog(ex.StackTrace);
                 WriteToLog(ex.Message);
                 WriteToLog(ex.InnerException.Message);
             }
         }
-     
 
-        private void NotifyViaEmail(ContactRecord record)
+
+        private static void NotifyViaEmail(ContactRecord record)
         {
             StringBuilder sb = new StringBuilder();
 
             sb.Append(@"<h2 style='background-color:yellow;display:inline;'>OsitosPartyRental.com Customer Inquiry</h2>");
             sb.Append("<table>");
 
-            
+
             sb.Append("<tr style='border: 1px solid black';>");
             sb.Append("<th style='border: 1px solid black';>");
 
@@ -322,13 +300,11 @@ namespace Ositos.EmailService2
             sb.Append("</table>");
 
 
-            //SendEmail(sb, "OsitosPartyRentals Site Message", "bgreer5050@gmail.com", "ositospartyrentals@gmail.com", "bgreer5050@gmail.com", "xxxxxx");
-            SendEmail(sb, "OsitosPartyRentals Site Message", "bgreer5050@gmail.com", "Jerry Fuentes <ositospartyrentals@gmail.com>", "bgreer5050@gmail.com", "xxxxxx");
-
+            SendEmail(sb, "OsitosPartyRentals Site Message", "bgreer5050@gmail.com", "ositospartyrentals@gmail.com", "bgreer5050@gmail.com", "Kab,123Kab,123");
 
         }
 
-        private void SendEmail(StringBuilder sb, string _subject, string _emailFrom, string _emailTo, string _strUserName, string _strPassword)
+        private static void SendEmail(StringBuilder sb, string _subject, string _emailFrom, string _emailTo, string _strUserName, string _strPassword)
         {
             MailAddress emailFrom = new MailAddress(_emailFrom);
 
@@ -357,14 +333,8 @@ namespace Ositos.EmailService2
             smtp.Send(msg);
         }
 
-       
 
-        protected override void OnStop()
-        {
-
-        }
-
-        private void WriteToLog(string msg)
+        private static void WriteToLog(string msg)
         {
             string fileName = @"C:\ositos\log.txt";
             System.IO.StreamWriter sw = System.IO.File.AppendText(fileName);
@@ -372,5 +342,9 @@ namespace Ositos.EmailService2
             sw.Close();
             sw.Dispose();
         }
+
+
+
+
     }
 }

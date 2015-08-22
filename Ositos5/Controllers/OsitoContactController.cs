@@ -386,11 +386,11 @@ namespace Ositos5.Controllers
             //sb.Append("</table>");
 
 
-            //SendEmail(sb, "OsitosPartyRentals Site Message","ositospartyrentals@gmail.com" ,"ositospartyrentals@gmail.com", "ositospartyrentals@gmail.com", "mauricio69");
-             //SendEmail(sb, "OsitosPartyRentals Site Message", "bgreer5050@gmail.com", "bgreer5050@gmail.com", "bgreer5050@gmail.com", "Kab,123Kab,123");
+            //SendEmail(sb, "OsitosPartyRentals Site Message","ositospartyrentals@gmail.com" ,"ositospartyrentals@gmail.com", "ositospartyrentals@gmail.com", "........");
+             //SendEmail(sb, "OsitosPartyRentals Site Message", "bgreer5050@gmail.com", "bgreer5050@gmail.com", "bgreer5050@gmail.com", "........");
 
 //             StringBuilder textMsg = new StringBuilder("Please check your ositospartyrentals@gmail.com email account.  A customer has sent you a message via the web contact form.");
-            //SendEmail(textMsg, "OsitosMessageWaiting", "ositospartyrentals@gmail.com", "7739888582@tmomail.net", "ositospartyrentals@gmail.com", "mauricio69");
+            //SendEmail(textMsg, "OsitosMessageWaiting", "ositospartyrentals@gmail.com", "7739888582@tmomail.net", "ositospartyrentals@gmail.com", ".........");
 
 
      //  }
@@ -427,7 +427,7 @@ namespace Ositos5.Controllers
         {
             StringBuilder sb = new StringBuilder();
             MailAddressCollection emailAddresses = new MailAddressCollection();
-            MailAddress addressTo1 = new MailAddress("7739888582@tmomail.net");
+            MailAddress addressTo1 = new MailAddress("7**39888582@tmomail.net"); // GITHUB
             SmtpClient client = new SmtpClient();
             MailMessage msg = new MailMessage();
 

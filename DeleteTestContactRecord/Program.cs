@@ -14,7 +14,7 @@ namespace DeleteTestContactRecord
     {
         static void Main(string[] args)
         {
-            Test2();
+            TestEmail.Start();
 
             
         }

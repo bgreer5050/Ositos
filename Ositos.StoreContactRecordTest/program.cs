@@ -45,6 +45,8 @@ namespace Ositos.StoreContactRecordTest
             WriteToLog("Success");
         }
 
+
+
         protected static void Test()
         {
             try
